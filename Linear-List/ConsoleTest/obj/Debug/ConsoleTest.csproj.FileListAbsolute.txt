@@ -1,0 +1,8 @@
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\Linear-List.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\Linear-List.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.pdb
