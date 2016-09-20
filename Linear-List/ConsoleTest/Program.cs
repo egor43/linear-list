@@ -12,6 +12,8 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
             LinearList<int> LL = new LinearList<int>();
+            LinearList<double> DD = new LinearList<double>(6.6);
+            Console.WriteLine(DD.Print());
             LL.AddFront(1);
             LL.AddFront(2);
             LL.AddFront(3);
@@ -24,6 +26,17 @@ namespace ConsoleTest
             Console.WriteLine(LL.SearchValue(4));
             Console.WriteLine(LL.SearchValueToString(5));
             Console.WriteLine(LL.Print());
+            Console.WriteLine();
+            LinearList<int> OO = new LinearList<int>();
+            Console.WriteLine(OO.Print());
+            try
+            {
+                OO.Delete(1);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
         }
     }
