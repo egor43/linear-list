@@ -1,0 +1,4 @@
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Release\Linear-List.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Release\Linear-List.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\obj\Release\Linear-List.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\obj\Release\Linear-List.pdb
