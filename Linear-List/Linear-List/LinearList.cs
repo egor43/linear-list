@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Linear_List
 {
-    //TODO: Метод поиска по значению
     public class LinearList<T> where T : struct
     {
         #region Свойства

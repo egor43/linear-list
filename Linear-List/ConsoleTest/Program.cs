@@ -21,9 +21,9 @@ namespace ConsoleTest
             LL.AddBack(0);
             LL.Delete(7);
             LinearList<int> FF = LL.SearchValueToLinearList(4);
-
-            //Console.WriteLine(LL.SearchValue(4));
-            //Console.WriteLine(LL.Print());
+            Console.WriteLine(LL.SearchValue(4));
+            Console.WriteLine(LL.SearchValueToString(5));
+            Console.WriteLine(LL.Print());
             Console.ReadLine();
         }
     }
