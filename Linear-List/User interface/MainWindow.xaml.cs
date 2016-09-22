@@ -41,6 +41,140 @@ namespace User_interface
             else MyList = new LinearList<double>();
         }
 
+        private void btnAddFront_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbInt.IsChecked == true)
+            {
+                int Value;
+                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                {
+                    ((LinearList<int>)MyList).AddFront(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+            else
+            {
+                double Value;
+                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                {
+                    ((LinearList<double>)MyList).AddFront(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+        }
+
+        private void btnResult_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbInt.IsChecked == true) tbResult.Text = ((LinearList<int>)MyList).Print();
+            else tbResult.Text = ((LinearList<double>)MyList).Print();
+        }
+
+        private void btnClearResult_Click(object sender, RoutedEventArgs e)
+        {
+            tbResult.Text = "";
+        }
+
+        private void btnAddBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbInt.IsChecked == true)
+            {
+                int Value;
+                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                {
+                    ((LinearList<int>)MyList).AddBack(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+            else
+            {
+                double Value;
+                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                {
+                    ((LinearList<double>)MyList).AddBack(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            int Value;
+            if ((rbInt.IsChecked == true) && (Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
+            {
+                try
+                {
+                    ((LinearList<int>)MyList).Delete(Value);
+                    tbInput.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    tbInput.Text = ex.Message;
+                }
+            }
+            else if ((Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
+            {
+                try
+                {
+                    ((LinearList<double>)MyList).Delete(Value);
+                    tbInput.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    tbInput.Text = ex.Message;
+                }
+            }
+            else
+            {
+                tbInput.Text = "Введено неверное значение";
+            }
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbInt.IsChecked == true)
+            {
+                int Value;
+                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                {
+                    tbResult.Text = ((LinearList<int>)MyList).SearchValueToString(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+            else
+            {
+                double Value;
+                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                {
+                    tbResult.Text = ((LinearList<double>)MyList).SearchValueToString(Value);
+                    tbInput.Text = "";
+                }
+                else
+                {
+                    tbInput.Text = "Введено неверное значение";
+                }
+            }
+        }
+
         public void InterfaceOff()
         {
             stpInput.IsEnabled = false;
@@ -63,5 +197,6 @@ namespace User_interface
             tbResult.Text = "Для изменения типа списка нажмите \"очистить\"";
         }
     }
-
 }
+
+

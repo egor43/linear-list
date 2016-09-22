@@ -27,13 +27,14 @@
             <Label Content="Результат:" Margin="10,5,0,0"/>
             <TextBox x:Name="tbResult" Grid.Row="2" Margin="10,0,10,10" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" IsReadOnly="True"/>
         </StackPanel>
-        <Button x:Name="btnResult" Content="Результат" HorizontalAlignment="Left" Margin="191,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Height="47" Background="#FF83FBAF"/>
+        <Button x:Name="btnResult" Content="Вывести список" HorizontalAlignment="Left" Margin="191,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Height="47" Background="#FF83FBAF" Click="btnResult_Click"/>
         <WrapPanel Name="wrpActionButtons" Grid.Row="2" Margin="10">
-            <Button Name="btnClear" Content="Очистить" Margin="5" Background="#FFF14C4C" Click="btnClear_Click"/>
-            <Button Name="btnAddFront" Content="Добавить вперед" Margin="5"/>
-            <Button Name="btnAddBack" Content="Добавить назад" Margin="5"/>
-            <Button Name="btnDelete" Content="Удалить" Margin="5"/>
-            <Button Name="btnSearch" Content="Найти значение" Margin="5"/>
+            <Button Name="btnClear" Content="Очистить список " Margin="5" Background="#FFF14C4C" Click="btnClear_Click"/>
+            <Button Name="btnAddFront" Content="Добавить вперед" Margin="5" Click="btnAddFront_Click"/>
+            <Button Name="btnAddBack" Content="Добавить назад" Margin="5" Click="btnAddBack_Click"/>
+            <Button Name="btnDelete" Content="Удалить" Margin="5" Click="btnDelete_Click"/>
+            <Button Name="btnSearch" Content="Найти значение" Margin="5" Click="btnSearch_Click"/>
+            <Button Name="btnClearResult" Content="Очистить результат" Margin="5" Click="btnClearResult_Click"/>
         </WrapPanel>
     </Grid>
 </Window>
