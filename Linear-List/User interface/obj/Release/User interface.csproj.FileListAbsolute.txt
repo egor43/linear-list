@@ -12,3 +12,5 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Release\Use
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Release\User interface.csproj.GenerateResource.Cache
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Release\User interface.exe
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Release\User interface.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Release\Linear-List.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Release\Linear-List.pdb

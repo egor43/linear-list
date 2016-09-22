@@ -13,23 +13,23 @@
             <RowDefinition Height="80*"/>
             <RowDefinition Height="94*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
+        <StackPanel Name="stpInput">
             <Label Content="Поле ввода:" Margin="10,5,0,0"/>
             <TextBox x:Name="tbInput" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
-        <GroupBox x:Name="groupBox" Header="Тип линейного списка" HorizontalAlignment="Left" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Height="58" Width="155">
+        <GroupBox x:Name="groupBox" Header="Тип линейного списка" HorizontalAlignment="Left" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Height="58" Width="155" FontWeight="Bold">
             <WrapPanel>
-                <RadioButton Name="rbInt" Content="Int" Margin="10"/>
-                <RadioButton Name="rbDouble" Content="Double" Margin="10"/>
+                <RadioButton Name="rbInt" Content="Int" Tag="int" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
+                <RadioButton Name="rbDouble" Content="Double" Tag="double" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
             </WrapPanel>
         </GroupBox>
-        <StackPanel Grid.Row="3">
+        <StackPanel Name="stpOutput" Grid.Row="3">
             <Label Content="Результат:" Margin="10,5,0,0"/>
-            <TextBox x:Name="tbResult" Grid.Row="2" Margin="10,0,10,10" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50"/>
+            <TextBox x:Name="tbResult" Grid.Row="2" Margin="10,0,10,10" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" IsReadOnly="True"/>
         </StackPanel>
-        <Button x:Name="btnPesult" Content="Результат" HorizontalAlignment="Left" Margin="191,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Height="47" Background="#FF83FBAF"/>
-        <WrapPanel Grid.Row="2" Margin="10">
-            <Button Name="btnClear" Content="Очистить" Margin="5" Background="#FFF14C4C"/>
+        <Button x:Name="btnResult" Content="Результат" HorizontalAlignment="Left" Margin="191,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Height="47" Background="#FF83FBAF"/>
+        <WrapPanel Name="wrpActionButtons" Grid.Row="2" Margin="10">
+            <Button Name="btnClear" Content="Очистить" Margin="5" Background="#FFF14C4C" Click="btnClear_Click"/>
             <Button Name="btnAddFront" Content="Добавить вперед" Margin="5"/>
             <Button Name="btnAddBack" Content="Добавить назад" Margin="5"/>
             <Button Name="btnDelete" Content="Удалить" Margin="5"/>

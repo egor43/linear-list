@@ -1,0 +1,16 @@
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\User interface.exe.config
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\User interface.exe
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\User interface.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\Linear-List.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\Linear-List.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.csprojResolveAssemblyReference.cache
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\MainWindow.g.cs
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\App.g.cs
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.cache
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.lref
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\MainWindow.baml
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.g.resources
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User_interface.Properties.Resources.resources
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.csproj.GenerateResource.Cache
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.exe
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.pdb
