@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Linear-List</name>
+    </assembly>
+    <members>
+        <member name="T:Linear_List.LinearList`1">
+            <summary>
+            Представляет линейный список открытого структурного типа.
+            </summary>
+            <typeparam name="T">указатель места заполнения (ограничение: struct)</typeparam>
+        </member>
+        <member name="P:Linear_List.LinearList`1.Head">
+            <summary>
+            Указатель на первый элемент списка
+            </summary>
+        </member>
+        <member name="P:Linear_List.LinearList`1.Length">
+            <summary>
+            Длинна списка (отсчет с 1)
+            </summary>
+        </member>
+        <member name="T:Linear_List.LinearList`1.Element">
+            <summary>
+            Представляет элемент линейного списка
+            </summary>
+        </member>
+        <member name="P:Linear_List.LinearList`1.Element.Value">
+            <summary>
+            Значение элемента
+            </summary>
+        </member>
+        <member name="P:Linear_List.LinearList`1.Element.Next">
+            <summary>
+            Указатель на следующий элемент
+            </summary>
+        </member>
+        <member name="M:Linear_List.LinearList`1.Element.#ctor(`0,Linear_List.LinearList{`0}.Element)">
+            <summary>
+            Инициализирует элемент линейного списка
+            </summary>
+            <param name="value">значение элемента</param>
+            <param name="next">ссылка на следующий элемент</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.#ctor">
+            <summary>
+            Инициализирует линейный список значениями по умолчанию
+            </summary>
+        </member>
+        <member name="M:Linear_List.LinearList`1.#ctor(`0)">
+            <summary>
+            Инициализирует линейный список и первый элемент списка
+            </summary>
+            <param name="value">значение первого элемента списка</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.Clear">
+            <summary>
+            Спбрасывает линейный список в значения по умолчанию
+            </summary>
+        </member>
+        <member name="M:Linear_List.LinearList`1.AddBack(`0)">
+            <summary>
+            Добавляет элемент в конец списка
+            </summary>
+            <param name="value">значение элемента</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.AddFront(`0)">
+            <summary>
+            Добавляет элемент в начало списка
+            </summary>
+            <param name="value">значение элемента</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.Add(`0,System.Int32)">
+            <summary>
+            Добавляет элемент в указанную позицию списка
+            </summary>
+            <param name="value">значение элемента</param>
+            <param name="position">позиция элемента</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.Print">
+            <summary>
+            Возвращает строковое представление линейного списка
+            </summary>
+            <returns>строковое представление линейного списка</returns>
+        </member>
+        <member name="M:Linear_List.LinearList`1.Delete(System.Int32)">
+            <summary>
+            Удаляет элемент из линейного списка
+            </summary>
+            <param name="position">позиция удаляемого элемента</param>
+        </member>
+        <member name="M:Linear_List.LinearList`1.SearchValue(`0)">
+            <summary>
+            Осуществляет поиск элемента по значению
+            </summary>
+            <param name="ValueToSearch">значение для поиска</param>
+            <returns>Если поиск успешен: возвращает позицию элемента в списке начиная с 1, иначе: возвращает -1</returns>
+        </member>
+        <member name="M:Linear_List.LinearList`1.SearchValueToString(`0)">
+            <summary>
+            Осуществляет поиск элемента по значению
+            </summary>
+            <param name="ValueToSearch">значение для поиска</param>
+            <returns>Возвращает форматированное строковое представление результата поиска элемента.</returns>
+        </member>
+        <member name="M:Linear_List.LinearList`1.SearchValueToLinearList(`0)">
+            <summary>
+            Осуществляет поиск элемента по значению
+            </summary>
+            <param name="ValueToSearch">значение для поиска</param>
+            <returns>Если поиск успешен: возвращает линейный список, состоящий из искомого элемента, иначе: возвращает null</returns>
+        </member>
+    </members>
+</doc>

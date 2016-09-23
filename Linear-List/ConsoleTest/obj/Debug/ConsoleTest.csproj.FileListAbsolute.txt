@@ -6,3 +6,4 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\Linear-L
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.exe
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\Linear-List.xml

@@ -14,3 +14,4 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User_
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.csproj.GenerateResource.Cache
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.exe
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.pdb
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\Linear-List.xml
