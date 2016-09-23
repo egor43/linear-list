@@ -18,13 +18,61 @@ namespace User_interface
 {
     public partial class MainWindow : Window
     {
+        #region Поля
+        /// <summary>
+        /// Публичная переменная для дальнейшего использования в качестве переменной типа LinearList
+        /// </summary>
         public Object MyList;
+        #endregion
+
+        #region Методы
+
+        /// <summary>
+        /// Инициализирует компоненты и переводит пользовательский интерфейс в режим выбора типа линейного списка
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             InterfaceOff();
         }
 
+        /// <summary>
+        /// Переводит пользовательский интерфейс в режим выбора типа линейного списка
+        /// </summary>
+        public void InterfaceOff()
+        {
+            stpInput.IsEnabled = false;
+            wrpActionButtons.IsEnabled = false;
+            btnResult.IsEnabled = false;
+            rbInt.IsChecked = false;
+            rbDouble.IsChecked = false;
+            groupBox.IsEnabled = true;
+            tbResult.Text = "Для начала работы выберите тип списка (int/double)";
+            groupBox.Background = Brushes.LightGreen;
+        }
+
+        /// <summary>
+        /// Переводит пользовательский интерфейс в режим работы с линейным списком
+        /// </summary>
+        public void InterfaceOn()
+        {
+            stpInput.IsEnabled = true;
+            wrpActionButtons.IsEnabled = true;
+            btnResult.IsEnabled = true;
+            groupBox.IsEnabled = false;
+            groupBox.Background = Brushes.LightPink;
+            tbResult.Text = "Для изменения типа списка нажмите \"очистить\"";
+        }
+
+        #endregion
+
+        #region Обработчики событий
+
+        /// <summary>
+        /// Очищает линейный список, текстовые блоки и переводит пользовательский интерфейс в режим выбора типа линейного списка
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             tbInput.Text = "";
@@ -33,6 +81,11 @@ namespace User_interface
             MyList = null;
         }
 
+        /// <summary>
+        /// Определяет тип линейного списка
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             InterfaceOn();
@@ -41,6 +94,11 @@ namespace User_interface
             else MyList = new LinearList<double>();
         }
 
+        /// <summary>
+        /// Добавляет вперед новый элемент линейного списка со значением, указанным в поле ввода 
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnAddFront_Click(object sender, RoutedEventArgs e)
         {
             if (rbInt.IsChecked == true)
@@ -71,17 +129,32 @@ namespace User_interface
             }
         }
 
+        /// <summary>
+        /// Выводит линейный список в поле вывода результата
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnResult_Click(object sender, RoutedEventArgs e)
         {
             if (rbInt.IsChecked == true) tbResult.Text = ((LinearList<int>)MyList).Print();
             else tbResult.Text = ((LinearList<double>)MyList).Print();
         }
 
+        /// <summary>
+        /// Очищает поле вывода результата
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnClearResult_Click(object sender, RoutedEventArgs e)
         {
             tbResult.Text = "";
         }
 
+        /// <summary>
+        /// Добавляет назад новый элемент линейного списка со значением, указанным в поле ввода 
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnAddBack_Click(object sender, RoutedEventArgs e)
         {
             if (rbInt.IsChecked == true)
@@ -112,6 +185,11 @@ namespace User_interface
             }
         }
 
+        /// <summary>
+        /// Удаляет с указанной, в поле ввода, позиции элемент из линейного списка
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             int Value;
@@ -145,6 +223,11 @@ namespace User_interface
             }
         }
 
+        /// <summary>
+        /// Осуществляет поиск элемента в линейном списке по значению, указанному в поле ввода
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             if (rbInt.IsChecked == true)
@@ -174,28 +257,8 @@ namespace User_interface
                 }
             }
         }
-
-        public void InterfaceOff()
-        {
-            stpInput.IsEnabled = false;
-            wrpActionButtons.IsEnabled = false;
-            btnResult.IsEnabled = false;
-            rbInt.IsChecked = false;
-            rbDouble.IsChecked = false;
-            groupBox.IsEnabled = true;
-            tbResult.Text = "Для начала работы выберите тип списка (int/double)";
-            groupBox.Background = Brushes.LightGreen;
-        }
-
-        public void InterfaceOn()
-        {
-            stpInput.IsEnabled = true;
-            wrpActionButtons.IsEnabled = true;
-            btnResult.IsEnabled = true;
-            groupBox.IsEnabled = false;
-            groupBox.Background = Brushes.LightPink;
-            tbResult.Text = "Для изменения типа списка нажмите \"очистить\"";
-        }
+        #endregion
+        
     }
 }
 

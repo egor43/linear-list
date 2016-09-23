@@ -7,6 +7,9 @@ using Linear_List;
 
 namespace ConsoleTest
 {
+    /// <summary>
+    /// Представляет класс для тестирования библиотеки Linear-List
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
