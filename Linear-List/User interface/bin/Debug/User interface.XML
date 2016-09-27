@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User interface</name>
+    </assembly>
+    <members>
+        <member name="T:User_interface.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:User_interface.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:User_interface.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:User_interface.MainWindow">
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:User_interface.MainWindow.MyList">
+            <summary>
+            Публичная переменная для дальнейшего использования в качестве переменной типа LinearList
+            </summary>
+        </member>
+        <member name="M:User_interface.MainWindow.#ctor">
+            <summary>
+            Инициализирует компоненты и переводит пользовательский интерфейс в режим выбора типа линейного списка
+            </summary>
+        </member>
+        <member name="M:User_interface.MainWindow.InterfaceOff">
+            <summary>
+            Переводит пользовательский интерфейс в режим выбора типа линейного списка
+            </summary>
+        </member>
+        <member name="M:User_interface.MainWindow.InterfaceOn">
+            <summary>
+            Переводит пользовательский интерфейс в режим работы с линейным списком
+            </summary>
+        </member>
+        <member name="M:User_interface.MainWindow.Print">
+            <summary>
+            Выводит линейный список в поле "Результат"
+            </summary>
+        </member>
+        <member name="M:User_interface.MainWindow.btnClear_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Очищает линейный список, текстовые блоки и переводит пользовательский интерфейс в режим выбора типа линейного списка
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.RadioButton_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Определяет тип линейного списка
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnAddFront_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Добавляет вперед новый элемент линейного списка со значением, указанным в поле ввода 
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnAddBack_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Добавляет назад новый элемент линейного списка со значением, указанным в поле ввода 
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnDelete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Удаляет с указанной, в поле ввода, позиции элемент из линейного списка
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnSearch_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Осуществляет поиск элемента в линейном списке по значению, указанному в поле ввода
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnClearInput_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Очищает поле ввода
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnResult_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Выводит линейный список в поле "Результат" (вызывает метод "Print")
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:User_interface.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:User_interface.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:User_interface.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

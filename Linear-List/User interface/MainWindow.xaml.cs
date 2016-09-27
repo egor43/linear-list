@@ -43,8 +43,8 @@ namespace User_interface
         {
             stpInput.IsEnabled = false;
             wrpActionButtons.IsEnabled = false;
-            btnResult.IsEnabled = false;
             rbInt.IsChecked = false;
+            btnResult.IsEnabled = false;
             rbDouble.IsChecked = false;
             groupBox.IsEnabled = true;
             tbResult.Text = "Для начала работы выберите тип списка (int/double)";
@@ -58,10 +58,19 @@ namespace User_interface
         {
             stpInput.IsEnabled = true;
             wrpActionButtons.IsEnabled = true;
-            btnResult.IsEnabled = true;
             groupBox.IsEnabled = false;
+            btnResult.IsEnabled = true;
             groupBox.Background = Brushes.LightPink;
-            tbResult.Text = "Для изменения типа списка нажмите \"очистить\"";
+            tbResult.Text = "Для изменения типа списка нажмите \"Очистить список\"";
+        }
+
+        /// <summary>
+        /// Выводит линейный список в поле "Результат"
+        /// </summary>
+        public void Print()
+        {
+            if (rbInt.IsChecked == true) tbResult.Text = ((LinearList<int>)MyList).Print();
+            else tbResult.Text = ((LinearList<double>)MyList).Print();
         }
 
         #endregion
@@ -103,51 +112,42 @@ namespace User_interface
         {
             if (rbInt.IsChecked == true)
             {
-                int Value;
-                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
-                {
-                    ((LinearList<int>)MyList).AddFront(Value);
-                    tbInput.Text = "";
-                }
+                if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
                 else
                 {
-                    tbInput.Text = "Введено неверное значение";
+                    int Value;
+                    if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                    {
+                        ((LinearList<int>)MyList).AddFront(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введено неверное значение";
+                        tbInput.Text = "";
+                    }
                 }
             }
             else
             {
-                double Value;
-                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
-                {
-                    ((LinearList<double>)MyList).AddFront(Value);
-                    tbInput.Text = "";
-                }
+                if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
                 else
                 {
-                    tbInput.Text = "Введено неверное значение";
+                    double Value;
+                    if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                    {
+                        ((LinearList<double>)MyList).AddFront(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введено неверное значение";
+                        tbInput.Text = "";
+                    }
                 }
             }
-        }
-
-        /// <summary>
-        /// Выводит линейный список в поле вывода результата
-        /// </summary>
-        /// <param name="sender">Объект, вызвавший событие</param>
-        /// <param name="e">Дополнительная информация</param>
-        private void btnResult_Click(object sender, RoutedEventArgs e)
-        {
-            if (rbInt.IsChecked == true) tbResult.Text = ((LinearList<int>)MyList).Print();
-            else tbResult.Text = ((LinearList<double>)MyList).Print();
-        }
-
-        /// <summary>
-        /// Очищает поле вывода результата
-        /// </summary>
-        /// <param name="sender">Объект, вызвавший событие</param>
-        /// <param name="e">Дополнительная информация</param>
-        private void btnClearResult_Click(object sender, RoutedEventArgs e)
-        {
-            tbResult.Text = "";
         }
 
         /// <summary>
@@ -159,28 +159,40 @@ namespace User_interface
         {
             if (rbInt.IsChecked == true)
             {
-                int Value;
-                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
-                {
-                    ((LinearList<int>)MyList).AddBack(Value);
-                    tbInput.Text = "";
-                }
+                if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
                 else
                 {
-                    tbInput.Text = "Введено неверное значение";
+                    int Value;
+                    if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                    {
+                        ((LinearList<int>)MyList).AddBack(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введено неверное значение";
+                        tbInput.Text = "";
+                    }
                 }
             }
             else
             {
-                double Value;
-                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
-                {
-                    ((LinearList<double>)MyList).AddBack(Value);
-                    tbInput.Text = "";
-                }
+                if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
                 else
                 {
-                    tbInput.Text = "Введено неверное значение";
+                    double Value;
+                    if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                    {
+                        ((LinearList<double>)MyList).AddBack(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введено неверное значение";
+                        tbInput.Text = "";
+                    }
                 }
             }
         }
@@ -192,34 +204,43 @@ namespace User_interface
         /// <param name="e">Дополнительная информация</param>
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            int Value;
-            if ((rbInt.IsChecked == true) && (Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
-            {
-                try
-                {
-                    ((LinearList<int>)MyList).Delete(Value);
-                    tbInput.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    tbInput.Text = ex.Message;
-                }
-            }
-            else if ((Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
-            {
-                try
-                {
-                    ((LinearList<double>)MyList).Delete(Value);
-                    tbInput.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    tbInput.Text = ex.Message;
-                }
-            }
+            if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
             else
             {
-                tbInput.Text = "Введено неверное значение";
+                int Value;
+                if ((rbInt.IsChecked == true) && (Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
+                {
+                    try
+                    {
+                        ((LinearList<int>)MyList).Delete(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    catch (Exception ex)
+                    {
+                        tbResult.Text = ex.Message;
+                        tbInput.Text = "";
+                    }
+                }
+                else if ((Int32.TryParse(tbInput.Text, out Value)) && (!tbInput.Text.Contains(" ")))
+                {
+                    try
+                    {
+                        ((LinearList<double>)MyList).Delete(Value);
+                        tbInput.Text = "";
+                        Print();
+                    }
+                    catch (Exception ex)
+                    {
+                        tbResult.Text = ex.Message;
+                        tbInput.Text = "";
+                    }
+                }
+                else
+                {
+                    tbResult.Text = "Введено неверное значение";
+                    tbInput.Text = "";
+                }
             }
         }
 
@@ -230,35 +251,70 @@ namespace User_interface
         /// <param name="e">Дополнительная информация</param>
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            if (rbInt.IsChecked == true)
-            {
-                int Value;
-                if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
-                {
-                    tbResult.Text = ((LinearList<int>)MyList).SearchValueToString(Value);
-                    tbInput.Text = "";
-                }
-                else
-                {
-                    tbInput.Text = "Введено неверное значение";
-                }
-            }
+            if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
             else
             {
-                double Value;
-                if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                if (rbInt.IsChecked == true)
                 {
-                    tbResult.Text = ((LinearList<double>)MyList).SearchValueToString(Value);
-                    tbInput.Text = "";
+                    int Value;
+                    if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
+                    else
+                    {
+                        if ((!tbInput.Text.Contains(" ")) && (Int32.TryParse(tbInput.Text, out Value)))
+                        {
+                            Print();
+                            tbInput.Text = "";
+                            MessageBox.Show(((LinearList<int>)MyList).SearchValueToString(Value));
+                        }
+                        else
+                        {
+                            tbResult.Text = "Введено неверное значение";
+                            tbInput.Text = "";
+                        }
+                    }
                 }
                 else
                 {
-                    tbInput.Text = "Введено неверное значение";
+                    double Value;
+                    if (tbInput.Text == "") tbResult.Text = "Вы не ввели значение в поле ввода";
+                    else
+                    {
+                        if ((!tbInput.Text.Contains(" ")) && (Double.TryParse(tbInput.Text, out Value)))
+                        {
+                            Print();
+                            tbInput.Text = "";
+                            MessageBox.Show(((LinearList<double>)MyList).SearchValueToString(Value));
+                        }
+                        else
+                        {
+                            tbResult.Text = "Введено неверное значение";
+                            tbInput.Text = "";
+                        }
+                    }
                 }
             }
         }
+
+        /// <summary>
+        /// Очищает поле ввода
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
+        private void btnClearInput_Click(object sender, RoutedEventArgs e)
+        {
+            tbInput.Text = "";
+        }
+
+        /// <summary>
+        /// Выводит линейный список в поле "Результат" (вызывает метод "Print")
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
+        private void btnResult_Click(object sender, RoutedEventArgs e)
+        {
+            Print();
+        }
         #endregion
-        
     }
 }
 

@@ -15,3 +15,4 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User 
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.exe
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\obj\Debug\User interface.pdb
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\Linear-List.xml
+D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\User interface.XML

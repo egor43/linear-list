@@ -5,36 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:User_interface"
         mc:Ignorable="d"
-        Title="Линейный список" ResizeMode="NoResize" Width="400" Height="350">
+        Title="Линейный список" ResizeMode="NoResize" Width="400" Height="350" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="63*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="84*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="94*"/>
         </Grid.RowDefinitions>
         <StackPanel Name="stpInput">
-            <Label Content="Поле ввода:" Margin="10,5,0,0"/>
-            <TextBox x:Name="tbInput" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Поле ввода:" Margin="10,0,0,0"/>
+            <TextBox x:Name="tbInput" Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Pen"/>
+            <Button Name="btnClearInput" Margin="10,0,10,0" Content="Очистить поле ввода" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Red" Click="btnClearInput_Click"/>
         </StackPanel>
-        <GroupBox x:Name="groupBox" Header="Тип линейного списка" HorizontalAlignment="Left" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Height="58" Width="155" FontWeight="Bold">
-            <WrapPanel>
-                <RadioButton Name="rbInt" Content="Int" Tag="int" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
-                <RadioButton Name="rbDouble" Content="Double" Tag="double" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
-            </WrapPanel>
-        </GroupBox>
+        <WrapPanel Grid.Row="1">
+            <GroupBox x:Name="groupBox" Header="Тип линейного списка" Margin="15,15,15,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <WrapPanel>
+                    <RadioButton Name="rbInt" Content="Int" Tag="int" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
+                    <RadioButton Name="rbDouble" Content="Double" Tag="double" Margin="10" Checked="RadioButton_Checked" FontWeight="Normal"/>
+                </WrapPanel>
+            </GroupBox>
+            <Button x:Name="btnResult" Content="Вывести список" Margin="10,25,0,5" Width="180" Background="#FF00D300" Click="btnResult_Click" ToolTip="Выводит список в поле &quot;Результат&quot;" />
+        </WrapPanel>
         <StackPanel Name="stpOutput" Grid.Row="3">
             <Label Content="Результат:" Margin="10,5,0,0"/>
             <TextBox x:Name="tbResult" Grid.Row="2" Margin="10,0,10,10" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" IsReadOnly="True"/>
         </StackPanel>
-        <Button x:Name="btnResult" Content="Вывести список" HorizontalAlignment="Left" Margin="191,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Height="47" Background="#FF83FBAF" Click="btnResult_Click"/>
-        <WrapPanel Name="wrpActionButtons" Grid.Row="2" Margin="10">
-            <Button Name="btnClear" Content="Очистить список " Margin="5" Background="#FFF14C4C" Click="btnClear_Click"/>
-            <Button Name="btnAddFront" Content="Добавить вперед" Margin="5" Click="btnAddFront_Click"/>
-            <Button Name="btnAddBack" Content="Добавить назад" Margin="5" Click="btnAddBack_Click"/>
-            <Button Name="btnDelete" Content="Удалить" Margin="5" Click="btnDelete_Click"/>
-            <Button Name="btnSearch" Content="Найти значение" Margin="5" Click="btnSearch_Click"/>
-            <Button Name="btnClearResult" Content="Очистить результат" Margin="5" Click="btnClearResult_Click"/>
+        <WrapPanel Name="wrpActionButtons" Grid.Row="2" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Name="btnClear" Content="Очистить список " Margin="5" Background="#FFF14C4C" Click="btnClear_Click" ToolTip="Очищает список и переходит к выбору типа списка"/>
+            <Button Name="btnAddFront" Content="Добавить вперед" Margin="5" Click="btnAddFront_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
+            <Button Name="btnAddBack" Content="Добавить назад" Margin="5" Click="btnAddBack_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
+            <Button Name="btnDelete" Content="Удалить элемент списка" Margin="5" Click="btnDelete_Click" ToolTip="Удаляет элемент с позиции, указанной в поле ввода"/>
+            <Button Name="btnSearch" Content="Найти элемент по значению" Margin="5" Click="btnSearch_Click" ToolTip="Ищет в списке элемент со значением, равным значению в поле ввода"/>
         </WrapPanel>
     </Grid>
 </Window>
