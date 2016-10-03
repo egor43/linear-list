@@ -52,6 +52,11 @@
             Выводит линейный список в поле "Результат"
             </summary>
         </member>
+        <member name="M:User_interface.MainWindow.HideAddPanel">
+            <summary>
+            Скрывает панель для ввода данных метода добавления на определенную позицию
+            </summary>
+        </member>
         <member name="M:User_interface.MainWindow.btnClear_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Очищает линейный список, текстовые блоки и переводит пользовательский интерфейс в режим выбора типа линейного списка
@@ -108,6 +113,27 @@
             <param name="sender">Объект, вызвавший событие</param>
             <param name="e">Дополнительная информация</param>
         </member>
+        <member name="M:User_interface.MainWindow.btnAdd_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Открывает панель для ввода данных метода добавить на определенную позицию
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnAddOk_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Добавляет элемент с указанным значением на указанную позицию
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
+        <member name="M:User_interface.MainWindow.btnAddCancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Скрывает панель для ввода данных метода добавить на определенную позицию
+            </summary>
+            <param name="sender">Объект, вызвавший событие</param>
+            <param name="e">Дополнительная информация</param>
+        </member>
         <member name="M:User_interface.MainWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -115,18 +141,18 @@
         </member>
         <member name="T:User_interface.Properties.Resources">
             <summary>
-              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
             </summary>
         </member>
         <member name="P:User_interface.Properties.Resources.ResourceManager">
             <summary>
-              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
             </summary>
         </member>
         <member name="P:User_interface.Properties.Resources.Culture">
             <summary>
-              Переопределяет свойство CurrentUICulture текущего потока для всех
-              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
             </summary>
         </member>
     </members>

@@ -7,3 +7,5 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleT
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.exe
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\obj\Debug\ConsoleTest.pdb
 D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\Linear-List.xml
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\System.Net.Http.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\ConsoleTest\bin\Debug\System.Net.Http.xml

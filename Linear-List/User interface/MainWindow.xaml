@@ -13,9 +13,21 @@
             <RowDefinition Height="80*"/>
             <RowDefinition Height="94*"/>
         </Grid.RowDefinitions>
+        <StackPanel Name="stpAddInput" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+            <StackPanel Width="180" Height="50">
+                <Label Content="Значение:" Margin="10,0,0,0"/>
+                <TextBox x:Name="tbAddInput" Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Pen" MaxLength="10"/>
+            </StackPanel>
+            <StackPanel Width="100" Height="50">
+                <Label Content="Позиция:" Margin="10,0,0,0"/>
+                <TextBox x:Name="tbAddPosition" Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Pen" MaxLength="10"/>
+            </StackPanel>
+            <Button Name="btnAddOk" Content="ОК" Click="btnAddOk_Click" Margin="5,10,5,7" Width="40"/>
+            <Button Name="btnAddCancel" Content="Отмена" Click="btnAddCancel_Click" Margin="5,10,10,7" Width="50"/>
+        </StackPanel>
         <StackPanel Name="stpInput">
             <Label Content="Поле ввода:" Margin="10,0,0,0"/>
-            <TextBox x:Name="tbInput" Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Pen"/>
+            <TextBox x:Name="tbInput" Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Pen" MaxLength="10"/>
             <Button Name="btnClearInput" Margin="10,0,10,0" Content="Очистить поле ввода" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Red" Click="btnClearInput_Click"/>
         </StackPanel>
         <WrapPanel Grid.Row="1">
@@ -35,8 +47,9 @@
             <Button Name="btnClear" Content="Очистить список " Margin="5" Background="#FFF14C4C" Click="btnClear_Click" ToolTip="Очищает список и переходит к выбору типа списка"/>
             <Button Name="btnAddFront" Content="Добавить вперед" Margin="5" Click="btnAddFront_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
             <Button Name="btnAddBack" Content="Добавить назад" Margin="5" Click="btnAddBack_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
-            <Button Name="btnDelete" Content="Удалить элемент списка" Margin="5" Click="btnDelete_Click" ToolTip="Удаляет элемент с позиции, указанной в поле ввода"/>
-            <Button Name="btnSearch" Content="Найти элемент по значению" Margin="5" Click="btnSearch_Click" ToolTip="Ищет в списке элемент со значением, равным значению в поле ввода"/>
+            <Button Name="btnDelete" Content="Удалить элемент" Margin="5" Click="btnDelete_Click" ToolTip="Удаляет элемент с позиции, указанной в поле ввода"/>
+            <Button Name="btnSearch" Content="Найти элемент" Margin="5" Click="btnSearch_Click" ToolTip="Ищет в списке элемент со значением, равным значению в поле ввода"/>
+            <Button Name="btnAdd" Content="Добавить элемент" Margin="5" Click="btnAdd_Click" ToolTip="Добавляет значение в указанную позицию"/>
         </WrapPanel>
     </Grid>
 </Window>

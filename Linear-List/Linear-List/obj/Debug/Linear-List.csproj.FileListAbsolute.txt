@@ -3,3 +3,6 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Debug\Linear-L
 D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\obj\Debug\Linear-List.dll
 D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\obj\Debug\Linear-List.pdb
 D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Debug\Linear-List.XML
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Debug\System.Net.Http.dll
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\bin\Debug\System.Net.Http.xml
+D:\Egor\GitRepository\linear-list.git\Linear-List\Linear-List\obj\Debug\Linear-List.csprojResolveAssemblyReference.cache

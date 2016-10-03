@@ -73,6 +73,17 @@ namespace User_interface
             else tbResult.Text = ((LinearList<double>)MyList).Print();
         }
 
+        /// <summary>
+        /// Скрывает панель для ввода данных метода добавления на определенную позицию
+        /// </summary>
+        public void HideAddPanel()
+        {
+            tbAddInput.Text = "";
+            tbAddPosition.Text = "";
+            stpInput.Visibility = Visibility.Visible;
+            stpAddInput.Visibility = Visibility.Hidden;
+        }
+
         #endregion
 
         #region Обработчики событий
@@ -313,6 +324,98 @@ namespace User_interface
         private void btnResult_Click(object sender, RoutedEventArgs e)
         {
             Print();
+        }
+
+        /// <summary>
+        /// Открывает панель для ввода данных метода добавить на определенную позицию
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            stpInput.Visibility = Visibility.Hidden;
+            stpAddInput.Visibility = Visibility.Visible;
+        }
+
+        /// <summary>
+        /// Добавляет элемент с указанным значением на указанную позицию
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
+        private void btnAddOk_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbInt.IsChecked == true)
+            {
+                if ((tbAddInput.Text == "") || (tbAddPosition.Text == "")) tbResult.Text = "Вы не ввели необходимые данные";
+                else
+                {
+                    int Value;
+                    int position;
+                    if ((!tbAddInput.Text.Contains(" ")) && (Int32.TryParse(tbAddInput.Text, out Value)) && (Int32.TryParse(tbAddPosition.Text, out position)))
+                    {
+                        try
+                        {
+                            ((LinearList<int>)MyList).Add(Value, position);
+                            tbAddInput.Text = "";
+                            tbAddPosition.Text = "";
+                            Print();
+                        }
+                        catch (Exception ex)
+                        {
+                            tbResult.Text = ex.Message;
+                            tbAddInput.Text = "";
+                            tbAddPosition.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введены неверные данные";
+                        tbAddInput.Text = "";
+                        tbAddPosition.Text = "";
+                    }
+                }
+            }
+            else
+            {
+                if ((tbAddInput.Text == "") || (tbAddPosition.Text == "")) tbResult.Text = "Вы не ввели необходимые данные";
+                else
+                {
+                    double Value;
+                    int position;
+                    if ((!tbAddInput.Text.Contains(" ")) && (Double.TryParse(tbAddInput.Text, out Value)) && (Int32.TryParse(tbAddPosition.Text, out position)))
+                    {
+                        try
+                        {
+                            ((LinearList<double>)MyList).Add(Value, position);
+                            tbAddInput.Text = "";
+                            tbAddPosition.Text = "";
+                            Print();
+                        }
+                        catch (Exception ex)
+                        {
+                            tbResult.Text = ex.Message;
+                            tbAddInput.Text = "";
+                            tbAddPosition.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        tbResult.Text = "Введены неверные данные";
+                        tbAddInput.Text = "";
+                        tbAddPosition.Text = "";
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Скрывает панель для ввода данных метода добавить на определенную позицию
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие</param>
+        /// <param name="e">Дополнительная информация</param>
+        private void btnAddCancel_Click(object sender, RoutedEventArgs e)
+        {
+            HideAddPanel();
         }
         #endregion
     }
