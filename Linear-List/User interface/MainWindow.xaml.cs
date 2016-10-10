@@ -95,10 +95,14 @@ namespace User_interface
         /// <param name="e">Дополнительная информация</param>
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            tbInput.Text = "";
-            tbResult.Text = "";
-            InterfaceOff();
-            MyList = null;
+            MessageBoxResult result = MessageBox.Show("Вы уверены, что хотите очистить список?", "Очистка списка", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                tbInput.Text = "";
+                tbResult.Text = "";
+                InterfaceOff();
+                MyList = null;
+            }
         }
 
         /// <summary>
@@ -359,6 +363,8 @@ namespace User_interface
                             tbAddInput.Text = "";
                             tbAddPosition.Text = "";
                             Print();
+                            stpInput.Visibility = Visibility.Visible;
+                            stpAddInput.Visibility = Visibility.Hidden;
                         }
                         catch (Exception ex)
                         {
@@ -390,6 +396,8 @@ namespace User_interface
                             tbAddInput.Text = "";
                             tbAddPosition.Text = "";
                             Print();
+                            stpInput.Visibility = Visibility.Visible;
+                            stpAddInput.Visibility = Visibility.Hidden;
                         }
                         catch (Exception ex)
                         {

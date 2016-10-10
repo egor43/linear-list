@@ -45,8 +45,8 @@
         </StackPanel>
         <WrapPanel Name="wrpActionButtons" Grid.Row="2" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Name="btnClear" Content="Очистить список " Margin="5" Background="#FFF14C4C" Click="btnClear_Click" ToolTip="Очищает список и переходит к выбору типа списка"/>
-            <Button Name="btnAddFront" Content="Добавить вперед" Margin="5" Click="btnAddFront_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
-            <Button Name="btnAddBack" Content="Добавить назад" Margin="5" Click="btnAddBack_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
+            <Button Name="btnAddFront" Content="Добавить назад" Margin="5" Click="btnAddFront_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
+            <Button Name="btnAddBack" Content="Добавить вперед" Margin="5" Click="btnAddBack_Click" ToolTip="Добавляет значение, введенное в поле ввода"/>
             <Button Name="btnDelete" Content="Удалить элемент" Margin="5" Click="btnDelete_Click" ToolTip="Удаляет элемент с позиции, указанной в поле ввода"/>
             <Button Name="btnSearch" Content="Найти элемент" Margin="5" Click="btnSearch_Click" ToolTip="Ищет в списке элемент со значением, равным значению в поле ввода"/>
             <Button Name="btnAdd" Content="Добавить элемент" Margin="5" Click="btnAdd_Click" ToolTip="Добавляет значение в указанную позицию"/>

@@ -18,3 +18,43 @@ D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\Linea
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\User interface.XML
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\System.Net.Http.dll
 D:\Egor\GitRepository\linear-list.git\Linear-List\User interface\bin\Debug\System.Net.Http.xml
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\User interface.exe.config
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\User interface.XML
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User interface.exe
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User interface.pdb
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\User interface.exe
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\User interface.pdb
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\Linear-List.dll
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\Linear-List.pdb
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\Linear-List.xml
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\bin\Debug\System.Net.Http.xml
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\MainWindow.g.cs
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\App.g.cs
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.cache
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.lref
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\MainWindow.baml
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User interface.g.resources
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\User_interface.Properties.Resources.resources
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\student\Downloads\linear-list-master\Linear-List\User interface\obj\Debug\GenerateResource.write.1.tlog
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\User interface.exe.config
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\User interface.XML
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User interface.exe
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User interface.pdb
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\User interface.exe
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\User interface.pdb
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\Linear-List.dll
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\Linear-List.pdb
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\Linear-List.xml
+E:\Егор\Технология прогр\Linear-List\User interface\bin\Debug\System.Net.Http.xml
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\ResolveAssemblyReference.cache
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\MainWindow.g.cs
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\App.g.cs
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.cache
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User interface_MarkupCompile.lref
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\MainWindow.baml
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User interface.g.resources
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\User_interface.Properties.Resources.resources
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\GenerateResource.read.1.tlog
+E:\Егор\Технология прогр\Linear-List\User interface\obj\Debug\GenerateResource.write.1.tlog
